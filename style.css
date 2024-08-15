@@ -25,13 +25,8 @@ a {
 
 .content_nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
-}
-
-.nav_Items {
-    display: flex;
-    gap: 15px;
 }
 
 .logo {
@@ -40,6 +35,12 @@ a {
 
 .logo img {
     width: 100%;
+    cursor: pointer;
+}
+
+.nav_Items {
+    display: flex;
+    gap: 35px;
 }
 
 .nav_Items li a {
@@ -53,11 +54,7 @@ a {
     color: black;
 }
 
-i.fa-angle-down {
-    padding-left: 5px;
-}
-
-.nav_Items i {
+.nav_Items li a i{
     padding-right: 5px;
 }
 
@@ -70,6 +67,12 @@ i.fa-angle-down {
     justify-content: space-between;
     position: fixed;
     z-index: 1;
+}
+
+.menu i {
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
 }
 
 .nav_Items_response {
@@ -90,78 +93,30 @@ i.fa-angle-down {
     padding: 15px 0;
 }
 
-.nav_Items_response li:hover {
-    background-color: white;
-    color: white;
-}
-
-.nav_Items_response li:hover {
-    color: black;
-}
-
-.nav_Items_response li a:hover {
-    color: black;
-}
-
 .nav_Items_response li a {
     color: white;
-}
-
-.nav_Items_response li a i {
-    padding-right: 7px;
 }
 
 .fa-x {
     display: none;
 }
 
-.menu i {
-    color: white;
-    cursor: pointer;
-    font-size: 30px;
-}
-
-.certi {
-    display: none;
-    padding: 11px 0 0 11px;
-    background: white;
-    border-radius: 12px;
-    margin-top: 12px;
-    opacity: 0;
-}
-
-.certi li {
-    padding: 8px 3px !important;
-}
-
-.certi li a {
-    color: black;
-    padding: 0 !important;
-}
-
-.certi li:hover {
-    background-color: black !important;
-}
-
-.certi li a:hover {
-    background-color: black !important;
-    color: white !important;
-}
 
 /* #################### Banner #################### */
 
-.banner1 {
-    background-image: url(assets/images/pexels-photo-574071.webp);
+#banner1 {
+    background-image: url(assets/images/banner1.jpg);
     background-position: center;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     opacity: 1;
-    z-index: -1;
+    z-index: 1;
+    transition: 1s;
 }
 
-.banner1::before {
+#banner1::before {
     content: "";
     background-color: black;
     opacity: 0.8;
@@ -179,22 +134,41 @@ i.fa-angle-down {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: darkgoldenrod;
     position: relative;
+    animation: sliders 2s infinite;
 }
 
 .content_banner h1 {
     font-size: 60px;
 }
 
-span {
-    font-size: 41px;
-    color: white;
+#banner2 {
+    background-image: url(assets/images/banner2.jpg);
+    background-position: center;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 1;
+    transition: 2s;
+    top: 0px;
+    width: 100%;
+    left: -100%;
+}
+
+#banner2::before {
+    content: "";
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .banner_two {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: initial;
     padding: 0 18%;
-    height: 85vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,7 +181,7 @@ span {
     padding: 0 24% 0 0;
 }
 
-#btnResume{
+#btnResume {
     margin-top: 16px;
     padding: 10px 25px;
     border: 2px solid darkgoldenrod;
@@ -218,36 +192,313 @@ span {
     transition: 0.5s;
 }
 
-#btnResume:hover{
+#btnResume:hover {
     background-color: black;
 }
 
-.banner2 {
-    background-image: url(assets/images/banner2.avif);
-    background-position: center;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 85.9vh;
-    opacity: 1;
+/* #################### About #################### */
+
+#about{
+    margin: 50px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.banner2::before {
-    content: "";
-    background-color: black;
-    opacity: 0.8;
+#about h1{
+    text-align: center;
+}
+
+.content_about {
+    padding-top: 20px;
+}
+
+.content_about h3{
+    font-size: 18px;
+    color: #3c4258;
+    text-transform: initial;
+    line-height: 1.8;
+}
+
+.content_about p{
+    font-size: 16px;
+    color: #999fb3;
+    padding: 35px 0 43px;
+    border-bottom: 1px solid #999fb3;
+}
+
+.contact_small {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact_small h3 {
+    padding: 9px 0 0 0;
+}
+
+.contact_small a {
+    color: #999fb3;
+    border-bottom: none;
+    padding: 0;
+}
+
+.contact_small a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.tel i{
+    padding-right: 5px;
+}
+
+
+/* #################### Education #################### */
+
+
+#sec_education {
+    background-color: #f8fbfd;
+    margin: 20px 0;
+    padding: 30px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.education h1 {
+    text-align: center;
+    font-weight: 300;
+}
+
+.education_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.edu_box {
+    padding-bottom: 30px;
+}
+
+.edu_box h2 {
+    color: #43485c;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.edu_box h3 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #636a82;
+    margin-top: 14px;
+}
+
+.edu_box h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.edu_box h5 {
+    color: #636a82;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 18px 0 20px;
+}
+
+.edu_box p {
+    color: #999fb3;
+    max-width: 335px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.dot {
+    display: flex;
     width: 100%;
-    height: 100%;
-    position: absolute;
+    align-items: center;
 }
 
+.dots {
+    height: 9px;
+    width: 3%;
+    border-radius: 50%;
+    background-color: #d92cf9;
+}
 
+hr {
+    width: 100%;
+}
+
+/* #################### Certification #################### */
+
+
+iframe {
+    width: 45%;
+    height: 19rem;
+}
+
+#certificate h1 {
+    text-align: center;
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.c_itm1 {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* #################### Skills #################### */
+
+#skills {
+    margin: 50px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.skill h1 {
+    text-align: center;
+}
+
+.content_skills_main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content_skills {
+    text-align: center;
+}
+
+.loader {
+    position: relative;
+    width: 118px;
+    height: 7rem;
+    background: conic-gradient(black 0%, #ebebeb 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24% 0;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    width: 74%;
+    height: 5rem;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 1px -1px 9px 3px black;
+}
+
+.loader p {
+    z-index: 3;
+    padding-top: 12px;
+    font-weight: 700;
+}
+
+/* #################### Projects #################### */
+
+#project{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 30px 0;
+}
+
+#project h1 {
+    text-align: center;
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.proj_content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 31px;
+}
+
+.proj_content img {
+    width: 94%;
+    box-shadow: 0px 1px 9px 2px black;
+    border-radius: 20px;
+}
+
+/* .proj_content a::before {
+    content: "Click To View";
+    width: 39%;
+    height: 48%;
+    position: absolute;
+    background-color: black;
+    display: flex;
+    opacity: 0.7;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 20px;
+} */
 
 
 /* #################### Media Query #################### */
 
-@media only screen and (max-width: 1062px) {
+@media only screen and (max-width: 1100px){
+    .loader {
+        height: 7rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
     #navigation {
         display: none;
     }
+
+    #navi_response {
+        z-index: 2;
+    }
 }
+
+@media only screen and (max-width: 700px){
+    .loader {
+        height: 6.5rem;
+        width: 108px;
+    }
+    .content_skills h4 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .loader {
+        height: 5.5rem;
+        width: 91px;
+    }
+    .content_skills h4{
+        font-size: 17px;
+    }
+
+    .loader:before {
+        width: 74%;
+        height: 4rem;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .proj_content img:first-of-type{
+        margin-bottom: 20px;
+    }
+    .proj_content {
+        display: block;
+        margin-top: 31px;
+    }
+
+    .proj_content img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .content_skills_main {
+        display: block;
+    }
+    .loader {
+        margin: 0 auto;
+    }
+}   
