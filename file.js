@@ -1,6 +1,4 @@
-windowloader=()=>{
-    window.location.href="index.html";
-}
+// #################### Navigation ####################
 
 let banner1=document.getElementById("banner1");
 openmenu=()=>{
@@ -15,33 +13,8 @@ closemenu=()=>{
     document.getElementById("cros").style.display="none";
 }
 
-document.getElementById("certi_dropdown").addEventListener("mouseenter",opendrop=()=>{
-    document.getElementById("down1").style.transform="rotate(180deg)";
-    document.getElementById("down1").style.transition="0.5s";
-    document.getElementById("certi").style.display="block";
-    document.getElementById("certi").style.opacity="1";
-})
 
-document.getElementById("certi_dropdown").addEventListener("mouseleave",closedrop=()=>{
-    document.getElementById("down1").style.transform="rotate(360deg)";
-    document.getElementById("down1").style.transition="0.5s";
-    document.getElementById("certi").style.display="none";
-    document.getElementById("certi").style.opacity="0";
-})
-
-document.getElementById("proj_dropdown").addEventListener("mouseenter",opendropdown=()=>{
-    document.getElementById("down2").style.transform="rotate(180deg)";
-    document.getElementById("down2").style.transition="0.5s";
-    document.getElementById("project").style.display="block";
-    document.getElementById("project").style.opacity="1";
-})
-
-document.getElementById("proj_dropdown").addEventListener("mouseleave",closedropclose=()=>{
-    document.getElementById("down2").style.transform="rotate(360deg)";
-    document.getElementById("down2").style.transition="0.5s";
-    document.getElementById("project").style.display="none";
-    document.getElementById("project").style.opacity="0";
-})
+// #################### Skills ####################
 
 let i=0;
 let skill1= setInterval(() => {
@@ -50,7 +23,6 @@ let skill1= setInterval(() => {
         clearInterval(skill1);
     }
     else{
-        console.log(i)
         document.getElementById('textloader1').innerHTML=i+"%";
         document.getElementById('loader1').style.background=`conic-gradient(black ${i}%, #ebebeb 0deg)`;
     }
@@ -67,7 +39,6 @@ let skill2= setInterval(() => {
         document.getElementById('loader2').style.background=`conic-gradient(black ${j}%, #ebebeb 0deg)`;
     }
 }, 50);
-
 
 let k=0;
 let skill3= setInterval(() => {
@@ -117,7 +88,7 @@ let skill6= setInterval(() => {
     }
 }, 50);
 
-
+// #################### Banner ####################
 
 // let banner2=document.getElementById("banner2");
 

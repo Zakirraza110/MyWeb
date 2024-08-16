@@ -20,14 +20,15 @@
             <div class="container">
                 <div class="content_nav">
                     <div class="logo">
-                        <img src="assets/images/logo.jpg" alt="">
+                        <a href="index.html"><img src="assets/images/logo.jpg" alt=""></a>
                     </div>
                     <ul class="nav_Items">
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#"><i class="fa-solid fa-graduation-cap"></i>EDUCATION</a></li>
-                        <li><a href="#">CERTIFICATION</a></li>
-                        <li><a href="#">PROJECT</a></li>
-                        <li><a href="#"><i class="fa-solid fa-phone"></i>CONTACT</a></li>
+                        <li id="list1"><a href="#about">ABOUT</a></li>
+                        <li id="list2"><a href="#sec_education"><i class="fa-solid fa-graduation-cap"></i>EDUCATION</a>
+                        </li>
+                        <li id="list3"><a href="#certificate">CERTIFICATION</a></li>
+                        <li id="list4"><a href="#project">PROJECT</a></li>
+                        <li id="list5"><a href="#contact"><i class="fa-solid fa-phone"></i>CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,7 +36,7 @@
 
         <nav id="navi_response">
             <div class="logo">
-                <img src="assets/images/logo.jpg" alt="">
+                <a href="index.html"><img src="assets/images/logo.jpg" alt=""></a>
             </div>
             <div class="menu">
                 <li><i onclick="openmenu()" id="lines" class="fa-solid fa-bars"></i></li>
@@ -44,13 +45,11 @@
         </nav>
 
         <ul class="nav_Items_response" id="nav_Items_response">
-            <li><a href="#"><i class="fa-solid fa-info"></i>ABOUT</a></li>
-            <li><a href="#"><i class="fa-solid fa-book"></i>EDUCATION</a></li>
-            <li><a href="#"><i class="fa-solid fa-screwdriver-wrench"></i>SKILLS</a></li>
-            <li><a href="#">EXPERIENCE</a></li>
-            <li id="certi_dropdown"><a href="#">CERTIFICATION</a></li>
-            <li id="proj_dropdown"><a href="#">PROJECT</a></li>
-            <li><a href="#"><i class="fa-solid fa-phone" aria-hidden="true"></i>CONTACT</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#sec_education"><i class="fa-solid fa-graduation-cap"></i>EDUCATION</a></li>
+            <li><a href="#certificate">CERTIFICATION</a></li>
+            <li><a href="#project">PROJECT</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-phone"></i>CONTACT</a></li>
         </ul>
 
     </section>
@@ -59,8 +58,7 @@
         <section id="banner1">
             <div class="container">
                 <div class="content_banner">
-                    <h2>HI, I AM</h2>
-                    <h1>ZAKIR RAZA</h1>
+                    <h1>Ideas In Code and well</h1>
                     <h2>UI / UX DEVELOPER</h2>
                     <a href="assets/Resume.pdf" target="_blank"><button id="btnResume">My Resume</button></a>
                 </div>
@@ -175,7 +173,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="skills">
         <div class="container">
             <div class="skill">
@@ -221,7 +219,7 @@
         <div class="container"></div>
     </section>
 
-    <div id="project">
+    <section id="project">
         <div class="container">
             <h1>Projects</h1>
             <hr>
@@ -242,7 +240,11 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="contact">
+        <div class="container"></div>
+    </section>
 
 
 
