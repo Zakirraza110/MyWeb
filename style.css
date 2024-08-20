@@ -432,9 +432,11 @@ section#experience h1 {
 }
 
 .content_exper {
+    transition: all 2s;
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    opacity: 0;
 }
 
 .content_exper .dots {
@@ -517,6 +519,11 @@ section#experience h1 {
     display: flex;
     justify-content: space-evenly;
     margin-top: 31px;
+}
+
+.proj_content a{
+    transition: all 1s;
+    opacity: 0;
 }
 
 .proj_content img {

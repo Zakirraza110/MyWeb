@@ -17,34 +17,24 @@ closemenu = () => {
     document.getElementById("cros").style.display = "none";
 }
 
-function disablednav(){
+function disablednav() {
     document.getElementById("nav_Items_response").style.top = "-72%";
     document.getElementById("nav_Items_response").style.position = "absolute";
-    document.getElementById("nav_Items_response").style.transition = "none";
+    document.getElementById("nav_Items_response").style.transition = "2s";
     document.getElementById("lines").style.display = "block";
     document.getElementById("cros").style.display = "none";
 }
 
 // #################### Skills ####################
 
+let isfunrun=true;
+window.addEventListener('scroll', () => {
+    if ((window.pageYOffset >= 2380 && window.pageYOffset <= 2880) && isfunrun==true) {
+        showprogress();
+    }
+})
 
-progressbar = () => {
-    const skillsection = document.getElementById('skills');
-    window.addEventListener('scroll', () => {
-        const sectionpos = skillsection.getBoundingClientRect().top;
-        const screenpos = window.innerHeight;
-
-        if (sectionpos < screenpos) {
-            showprogress();
-        }
-        else {
-            hideprogress();
-        }
-    })
-}
-
- showprogress = () => {
-    console.log("show progress");
+showprogress = () => {
     let i = 0;
     let skill1 = setInterval(() => {
         i++;
@@ -116,25 +106,9 @@ progressbar = () => {
             document.getElementById('loader6').style.background = `conic-gradient(black ${n}%, #ebebeb 0deg)`;
         }
     }, 50);
+    isfunrun=false;
+    
 }
-
-hideprogress = () => {
-    console.log("hide progress");
-    document.getElementById('textloader1').innerHTML = "0%";
-    document.getElementById('loader1').style.background = `conic-gradient(black 0%, #ebebeb 0deg)`;
-    document.getElementById('textloader2').innerHTML = "0%";
-    document.getElementById('loader2').style.background = `conic-gradient(black 0%, #ebebeb 0deg)`;
-    document.getElementById('textloader3').innerHTML = "0%";
-    document.getElementById('loader3').style.background = `conic-gradient(black 0%, #ebebeb 0deg)`;
-    document.getElementById('textloader4').innerHTML = "0%";
-    document.getElementById('loader4').style.background = `conic-gradient(black 0%, #ebebeb 0deg)`;
-    document.getElementById('textloader5').innerHTML = "0%";
-    document.getElementById('loader5').style.background = `conic-gradient(black 0%, #ebebeb 0deg)`;
-    document.getElementById('textloader6').innerHTML = "0%";
-    document.getElementById('loader6').style.background = `conic-gradient(black 0%, #ebebeb 0deg)`;
-}
-
-progressbar();
 
 // #################### Banner ####################
 
@@ -150,3 +124,40 @@ progressbar();
 //         banner2.style.left="-100%";
 //     }, 6000);
 // }, 6000);
+
+
+// #################### Project ####################
+
+window.addEventListener('scroll',projects=()=>{
+    if(window.pageYOffset >= 3540   ){
+        setTimeout(() => {
+            document.getElementById('pro1').style.opacity="1";
+        }, 1000);
+        setTimeout(() => {
+            document.getElementById('pro2').style.opacity="1";
+        }, 2000);
+        setTimeout(() => {
+            document.getElementById('pro3').style.opacity="1";
+        }, 3000);
+        setTimeout(() => {
+            document.getElementById('pro4').style.opacity="1";
+        }, 4000);
+    }
+})
+
+// #################### Experience ####################
+
+window.addEventListener('scroll',experience=()=>{
+    console.log(window.pageYOffset)
+    if(window.pageYOffset >= 2852){
+        setTimeout(() => {
+            document.getElementById("exp_fst").style.opacity="1";
+        }, 500);
+        setTimeout(() => {
+            document.getElementById("exp_sec").style.opacity="1";
+        }, 1000);
+        setTimeout(() => {
+            document.getElementById("exp_thd").style.opacity="1";
+        }, 1500);
+    }
+})
