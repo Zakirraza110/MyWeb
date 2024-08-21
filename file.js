@@ -43,7 +43,7 @@ showprogress = () => {
         }
         else {
             document.getElementById('textloader1').innerHTML = i + "%";
-            document.getElementById('loader1').style.background = `conic-gradient(black ${i}%, #ebebeb 0deg)`;
+            document.getElementById('loader1').style.background = `conic-gradient(goldenrod ${i}%, #ebebeb 0deg)`;
         }
     }, 50);
 
@@ -55,7 +55,7 @@ showprogress = () => {
         }
         else {
             document.getElementById('textloader2').innerHTML = j + "%";
-            document.getElementById('loader2').style.background = `conic-gradient(black ${j}%, #ebebeb 0deg)`;
+            document.getElementById('loader2').style.background = `conic-gradient(goldenrod ${j}%, #ebebeb 0deg)`;
         }
     }, 50);
 
@@ -67,7 +67,7 @@ showprogress = () => {
         }
         else {
             document.getElementById('textloader3').innerHTML = k + "%";
-            document.getElementById('loader3').style.background = `conic-gradient(black ${k}%, #ebebeb 0deg)`;
+            document.getElementById('loader3').style.background = `conic-gradient(goldenrod ${k}%, #ebebeb 0deg)`;
         }
     }, 50);
 
@@ -79,7 +79,7 @@ showprogress = () => {
         }
         else {
             document.getElementById('textloader4').innerHTML = l + "%";
-            document.getElementById('loader4').style.background = `conic-gradient(black ${l}%, #ebebeb 0deg)`;
+            document.getElementById('loader4').style.background = `conic-gradient(goldenrod ${l}%, #ebebeb 0deg)`;
         }
     }, 50);
 
@@ -91,7 +91,7 @@ showprogress = () => {
         }
         else {
             document.getElementById('textloader5').innerHTML = m + "%";
-            document.getElementById('loader5').style.background = `conic-gradient(black ${m}%, #ebebeb 0deg)`;
+            document.getElementById('loader5').style.background = `conic-gradient(goldenrod ${m}%, #ebebeb 0deg)`;
         }
     }, 50);
 
@@ -103,7 +103,7 @@ showprogress = () => {
         }
         else {
             document.getElementById('textloader6').innerHTML = n + "%";
-            document.getElementById('loader6').style.background = `conic-gradient(black ${n}%, #ebebeb 0deg)`;
+            document.getElementById('loader6').style.background = `conic-gradient(goldenrod ${n}%, #ebebeb 0deg)`;
         }
     }, 50);
     isfunrun=false;
@@ -129,26 +129,25 @@ showprogress = () => {
 // #################### Project ####################
 
 window.addEventListener('scroll',projects=()=>{
-    if(window.pageYOffset >= 3540   ){
+    if(window.pageYOffset >= 3511){
         setTimeout(() => {
             document.getElementById('pro1').style.opacity="1";
-        }, 1000);
+        }, 500);
         setTimeout(() => {
             document.getElementById('pro2').style.opacity="1";
-        }, 2000);
+        }, 1000);
         setTimeout(() => {
             document.getElementById('pro3').style.opacity="1";
-        }, 3000);
+        }, 1500);
         setTimeout(() => {
             document.getElementById('pro4').style.opacity="1";
-        }, 4000);
+        }, 2000);
     }
 })
 
 // #################### Experience ####################
 
 window.addEventListener('scroll',experience=()=>{
-    console.log(window.pageYOffset)
     if(window.pageYOffset >= 2852){
         setTimeout(() => {
             document.getElementById("exp_fst").style.opacity="1";
