@@ -517,11 +517,11 @@ section#experience h1 {
 
 .proj_content {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 31px;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
-.proj_content a{
+.proj_content a {
     transition: all 1s;
     opacity: 0;
 }
@@ -592,8 +592,8 @@ input[type="submit"]:hover {
     padding-bottom: 14px;
 }
 
-.contact a:hover{
-    color: brown    ;
+.contact a:hover {
+    color: brown;
 }
 
 .logo_contact {
@@ -764,8 +764,14 @@ input[type="submit"]:hover {
     .time {
         text-align: inherit;
     }
+
     .footer {
         padding: 0 20px;
+    }
+
+    .proj_content {
+        flex-wrap: wrap;
+        gap: 35px;
     }
 }
 
@@ -798,7 +804,9 @@ input[type="submit"]:hover {
         width: 16rem;
         height: 38px;
     }
-    input, textarea {
+
+    input,
+    textarea {
         width: 100%;
     }
 }
